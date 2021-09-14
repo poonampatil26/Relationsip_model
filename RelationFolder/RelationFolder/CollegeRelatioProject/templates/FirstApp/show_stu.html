@@ -1,0 +1,45 @@
+{% extends 'FirstApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Show Student </title>
+    {% endblock %}
+
+{% block content %}
+<div class="container">
+    <table class="table table-hover">
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Email</th>
+            <th>dept</th>
+
+        </tr>
+        {% for i in info %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.dob}}</td>
+            <td>{{i.dept_stu}}</td>
+
+        <td>
+            <a href="{% url 'update_stu' i.id %}">
+                <button class="btn btn-info ">Update</button>
+            </a>
+        </td>
+
+        <td>
+            <a href="{% url 'delete_stu' i.id %}">
+                <button class="btn btn-danger">Delete</button>
+            </a>
+        </td>
+        </tr>
+        {% endfor %}
+    </table>
+<br>
+<a href="{% url 'add_stu' %}">
+        <button class="btn btn-success">Add Student</button>
+    </a>
+
+    </div>
+        {% endblock %}

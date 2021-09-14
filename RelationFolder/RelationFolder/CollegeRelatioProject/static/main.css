@@ -1,0 +1,43 @@
+.my_navbar
+{
+ background-color: gray;
+ list-style-type : none;
+ overflow : hidden;
+}
+
+.bd{
+ background-color: pink;
+}
+
+li
+{
+    float : left;
+}
+
+li a
+{
+    display : block;
+    color : black;
+    text-decoration : none;
+    padding : 15px 15px 15px 10px;
+}
+
+li a:hover
+{
+    background-color : blue;
+    color: white;
+
+}
+
+header h1
+{
+    text-align : center;
+}
+
+footer h5
+{
+    background-color : gray;
+    text-align : center;
+    padding : 15px 15px 15px 10px;
+
+}

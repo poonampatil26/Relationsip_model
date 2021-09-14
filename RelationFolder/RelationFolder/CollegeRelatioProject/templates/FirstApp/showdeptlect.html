@@ -1,0 +1,24 @@
+{% extends 'FirstApp/base.html' %}
+{% block content %}
+<div class="container">
+    <table class="table table-secondary">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+        {% for i in record %}
+        <tr>
+            <td>{{i.lecturer}}</td>
+            <td>{{i.email}}</td>
+            <td>{% for j in i.dept_lect.all %}
+                    {{j}}
+                {% endfor %}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+
+
+{% endblock %}
